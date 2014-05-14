@@ -11,4 +11,14 @@ describe Board do
       Board.new.set(1,1,"X").should == "X"
     end
   end
+
+  context "getting a cell" do
+    before do
+      @board = Board.new
+      @board.set(1,1,"X")
+    end
+    it "gets an X" do
+      @board.get(1,1).should == "X"
+    end
+  end
 end

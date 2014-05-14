@@ -13,4 +13,8 @@ class Board
   def set(row, column, player)
     @board[row][column] = player
   end
+
+  def get(row, column)
+    @board[row][column]
+  end
 end
