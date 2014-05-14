@@ -1,4 +1,5 @@
 class Board
+  attr_accessor :player1
   def initialize
     @board = []
     @board[0] = []

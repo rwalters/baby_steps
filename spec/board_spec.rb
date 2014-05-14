@@ -21,4 +21,15 @@ describe Board do
       @board.get(1,1).should == "X"
     end
   end
+
+  context "player 1" do
+    before do
+      @board = Board.new
+      @board.player1 = "One"
+    end
+
+    it "has a name" do
+      @board.player1.should == "One"
+    end
+  end
 end
