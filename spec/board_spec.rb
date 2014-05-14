@@ -32,4 +32,15 @@ describe Board do
       @board.player1.should == "One"
     end
   end
+
+  context "player 2" do
+    before do
+      @board = Board.new
+      @board.player2 = "One"
+    end
+
+    it "has a name" do
+      @board.player2.should == "One"
+    end
+  end
 end
