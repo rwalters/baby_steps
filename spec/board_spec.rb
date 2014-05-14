@@ -8,7 +8,7 @@ describe Board do
   end
   context "setting a cell" do
     it "sets an X" do
-      Board.new.set(1,1,"X")
+      Board.new.set(1,1,"X").should == "X"
     end
   end
 end
