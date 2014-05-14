@@ -1,20 +1,22 @@
 require_relative '../board.rb'
 
 describe Board do
+  before do
+    @board = Board.new
+  end
   context "dimensions" do
     it "is 3x3" do
-      Board.new.dimensions.should == [3, 3]
+      @board.dimensions.should == [3, 3]
     end
   end
   context "setting a cell" do
     it "sets an X" do
-      Board.new.set(1,1,"X").should == "X"
+      @board.set(1,1,"X").should == "X"
     end
   end
 
   context "getting a cell" do
     before do
-      @board = Board.new
       @board.set(1,1,"X")
     end
     it "gets an X" do
@@ -24,7 +26,6 @@ describe Board do
 
   context "player 1" do
     before do
-      @board = Board.new
       @board.player1 = "One"
     end
 
@@ -35,7 +36,6 @@ describe Board do
 
   context "player 2" do
     before do
-      @board = Board.new
       @board.player2 = "One"
     end
 
