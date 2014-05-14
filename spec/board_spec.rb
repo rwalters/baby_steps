@@ -6,4 +6,9 @@ describe Board do
       Board.new.dimensions.should == [3, 3]
     end
   end
+  context "setting a cell" do
+    it "sets an X" do
+      Board.new.set(1,1,"X")
+    end
+  end
 end
